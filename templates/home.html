@@ -1,89 +1,61 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}
     <title>Test</title>
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
-</head>
-<body>
-    
-    <div class="nav_div">
-        <ul class="nav">
-            <li>
-                <a href="#aboutus">About us</a>
-              </li>
-            <li>
-              <a href="#test">Test</a>
-            </li>
-            <li>
-                <a href="#">Home</a>
-              </li>
-            <li>
-                <a href="#"><img src="" alt="logo" class="nav-items"></a>
-            </li>
-        </ul>
-    </div>
-
+{% endblock %}
+{% block body %}
     <br>
     <section>
-        <div id="into">
-            <p style="font-size: 50px;">
+        <div class="info">
+            <p>
                 What Are the Big 5 Personality Traits?
-            You might be Extraverted, Serious, Responsible, Lively or Dependable
+                You might be Extraverted, Serious, Responsible, Lively or Dependable
 
-            Trait theories of personality have long attempted to pin down exactly how many traits exist. Earlier theories have suggested various numbers. For instance, Gordon Allport's list contained 4,000 personality traits, Raymond Cattell had 16 personality factors, and Hans Eysenck offered a three-factor theory. Many researchers felt that Cattell's theory was too complicated and Eysenck's was too limited in scope. As a result, the Big 5 personality traits emerged and are used to describe the broad traits that serve as building blocks of personality.
+                Trait theories of personality have long attempted to pin down exactly how many traits exist. Earlier theories have suggested various numbers. For instance, Gordon Allport's list contained 4,000 personality traits, Raymond Cattell had 16 personality factors, and Hans Eysenck offered a three-factor theory. Many researchers felt that Cattell's theory was too complicated and Eysenck's was too limited in scope. As a result, the Big 5 personality traits emerged and are used to describe the broad traits that serve as building blocks of personality.
 
-            Many contemporary personality psychologists believe that there are five basic dimensions of personality, often referred to as the "Big 5" personality traits. These five primary personality traits based on which you are judged - extraversion (also often spelled extroversion), agreeableness, openness, conscientiousness, and neuroticism.
+                Many contemporary personality psychologists believe that there are five basic dimensions of personality, often referred to as the "Big 5" personality traits. These five primary personality traits based on which you are judged - extraversion (also often spelled extroversion), agreeableness, openness, conscientiousness, and neuroticism.
 
-            Extraversion is sociability, agreeableness is kindness, openness is creativity and intrigue, conscientiousness is thoughtfulness, and neuroticism often involves sadness or emotional instability.
-
-
-            It is important to note that each of the five primary personality traits represents a range between two extremes. For example, extraversion represents a continuum between extreme extraversion and extreme introversion. In the real world, most people lie somewhere in between. While there is a significant body of literature supporting these primary personality traits, researchers don't always agree on the exact labels for each dimension.
+                Extraversion is sociability, agreeableness is kindness, openness is creativity and intrigue, conscientiousness is thoughtfulness, and neuroticism often involves sadness or emotional instability.
 
 
-            Openness
-                Openness (also referred to as openness to experience) emphasizes imagination and insight the most out of all five personality traits. People who are high in openness tend to have a broad range of interests. They are curious about the world and other people and are eager to learn new things and enjoy new experiences. People who are high in this personality trait also tend to be more adventurous and creative. Conversely, people low in this personality trait are often much more traditional and may struggle with abstract thinking.
+                It is important to note that each of the five primary personality traits represents a range between two extremes. For example, extraversion represents a continuum between extreme extraversion and extreme introversion. In the real world, most people lie somewhere in between. While there is a significant body of literature supporting these primary personality traits, researchers don't always agree on the exact labels for each dimension.
 
-
-            Conscientiousness
-                Among each of the personality traits, conscientiousness is one defined by high levels of thoughtfulness, good impulse control, and goal-directed behaviors. Highly conscientious people tend to be organized and mindful of details. They plan ahead, think about how their behavior affects others, and are mindful of deadlines. Someone scoring lower in this primary personality trait is less structured and less organized. They may procrastinate to get things done, sometimes missing deadlines completely.
-
-
-            Extraversion
-                Extraversion (or extroversion) is a personality trait characterized by excitability, sociability, talkativeness, assertiveness, and high amounts of emotional expressiveness. People high in extraversion are outgoing and tend to gain energy in social situations. Being around others helps them feel energized and excited. People who are low in this personality trait or introverted tend to be more reserved. They have less energy to expend in social settings and social events can feel draining. Introverts often require a period of solitude and quiet in order to "recharge."
-
-
-            Agreeableness
-                This personality trait includes attributes such as trust, altruism, kindness, affection, and other prosocial behaviors. People who are high in agreeableness tend to be more cooperative while those low in this personality trait tend to be more competitive and sometimes even manipulative.
-
-
-            Neuroticism
-                Neuroticism is a personality trait characterized by sadness, moodiness, and emotional instability. Individuals who are high in neuroticism tend to experience mood swings, anxiety, irritability, and sadness. Those low in this personality trait tend to be more stable and emotionally resilient.
-
-            <b>Reading the Results</b>
+                <br>
+                <br>
+                <b>Openness :- </b>
+                    Openness (also referred to as openness to experience) emphasizes imagination and insight the most out of all five personality traits. People who are high in openness tend to have a broad range of interests. They are curious about the world and other people and are eager to learn new things and enjoy new experiences. People who are high in this personality trait also tend to be more adventurous and creative. Conversely, people low in this personality trait are often much more traditional and may struggle with abstract thinking.
+                <br><br>
+                <b>Conscientiousness :- </b>
+                    Among each of the personality traits, conscientiousness is one defined by high levels of thoughtfulness, good impulse control, and goal-directed behaviors. Highly conscientious people tend to be organized and mindful of details. They plan ahead, think about how their behavior affects others, and are mindful of deadlines. Someone scoring lower in this primary personality trait is less structured and less organized. They may procrastinate to get things done, sometimes missing deadlines completely.
+                <br><br>
+                <b>Extraversion :- </b>
+                    Extraversion (or extroversion) is a personality trait characterized by excitability, sociability, talkativeness, assertiveness, and high amounts of emotional expressiveness. People high in extraversion are outgoing and tend to gain energy in social situations. Being around others helps them feel energized and excited. People who are low in this personality trait or introverted tend to be more reserved. They have less energy to expend in social settings and social events can feel draining. Introverts often require a period of solitude and quiet in order to "recharge."
+                <br><br>
+                <b>Agreeableness :- </b>
+                    This personality trait includes attributes such as trust, altruism, kindness, affection, and other prosocial behaviors. People who are high in agreeableness tend to be more cooperative while those low in this personality trait tend to be more competitive and sometimes even manipulative.
+                <br><br>
+                <b>Neuroticism :- </b>
+                    Neuroticism is a personality trait characterized by sadness, moodiness, and emotional instability. Individuals who are high in neuroticism tend to experience mood swings, anxiety, irritability, and sadness. Those low in this personality trait tend to be more stable and emotionally resilient.
+                <br><br>
+                <b>Reading the Results</b>
+                <br>
 
                 If your result is Extraverted, it means that you are outgoing and energetic. You enjoy being around people and tend to be the life of the party. You may also be assertive and confident in social situations.
-
+                <br>
                 If your result is Serious, it means that you take your commitments seriously and are likely to be a hard worker. You are realistically aware of your own capabilities, but are also aware of your own limitations; you are not tempted by vanity or self-importance.
-
+                <br>
                 If your result is Responsible, it means that you can be counted on to follow through on your commitments and take care of responsibilities. You may also be organized and efficient in your work. Being responsible means being dependable, keeping promises and honoring the commitments. You accept the consequences for what you say and do.
-
-
+                <br>
                 If your result is Lively, it means that you are energetic and enthusiastic. You enjoy being active and may be full of ideas and energy. You may also be spontaneous and enjoy trying new things.
-
-
+                <br>
                 If your result is Dependable, it means that you are reliable and trustworthy. You can also be counted on to follow through on your commitments and take care of responsibilities. You may also be organized and efficient in your work. A dependable person is someone who gives reliable service and is loyal and stable. The dependable person is someone you can count on in the workplace, at home, or even in the greater management field of governance and politics.
-
-
+                <br>
                 No matter what your result on the Big 5 Personality Prediction Test is, remember that personality is not fixed and can change over time. It's important to embrace your unique traits and use them to your advantage in life and work.
-
-
             </p>
         </div>
     </section>
-    <section id="test">
+    <!-- <section id="test">
         <div class="main">
             <form action="submittest" method="post">
 
@@ -118,13 +90,6 @@
                 <button type="submit">Submit</button>
             </form>
         </div>
-    </section>
+    </section> -->
 
-    <section id="about">
-        <p>
-            About me
-        </p>
-    </section>
-
-</body>
-</html>
+{% endblock %}
