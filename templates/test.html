@@ -10,36 +10,42 @@
 
 <center>
     <div class="main">
-        <form action="submittest" method="post">
+        <form action="result" method="post">{% csrf_token %}
+            <div class="que">
+                NAME: <br><br>
+                <input type="text" name="name" placeholder="Enter your name" required>
+            </div>
+
             <div class="que">
                 GENDER: <br><br>
                 <input type="text" name="gender" placeholder="Male/Female" required>
             </div>
-            
+            <br>
             <div class="que">
                 AGE:<br><br>
                 <input type="text" name="age" placeholder="Enter your age" required><br>
             </div>
-            <br>
+            
             <div class="que">
                 OPENNESS: <br><br>
                 <input type="text" name="openness" placeholder="Rate yourself from 1-8" required><br>
             </div>
-
+            <br>
             <div class="que">
                 NEUROTICISM: <br><br>
                 <input type="text" name="neuroticism" placeholder="Rate yourself from 1-8" required><br>
             </div>
-            <br>
+            
             <div class="que">
                 CONSCIENTIOUSNESS: <br><br>
                 <input type="text" name="conscientiousness" placeholder="Rate yourself from 1-8" required><br>
             </div>
+            <br>
             <div class="que">
                 AGREEABLENESS: <br><br>
                 <input type="text" name="agreeableness" placeholder="Rate yourself from 1-8" required><br>
             </div>
-            <br>
+            
             <div class="que">
                 EXTRAVERSION: <br><br>
                 <input type="text" name="extraversion" placeholder="Rate yourself from 1-8" required><br>
