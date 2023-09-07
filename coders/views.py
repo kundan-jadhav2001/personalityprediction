@@ -1,6 +1,7 @@
 from django.shortcuts import render
 import joblib ,os
 from django.conf import settings
+from coders.models import personality
 
 # Create your views here.
 def home(request):
@@ -28,5 +29,8 @@ def result(request):
         with open(os.path.join(settings.BASE_DIR, 'coders\\train_model.pkl'),'rb') as f:
             model = joblib.load(f)
             pred = model.predict([[gender,age,openness,neuroticism,conscientiousness,agreeableness,extraversion]])
+    if pred:
+        db = personality(name=name,gender=gender,age=age,openness=openness,neuroticism=neuroticism,conscientiousness=conscientiousness,agreeableness=agreeableness,extraversion=extraversion,result=pred[0])
+        db.save()
 
     return render(request, 'result.html', {'name':name,'pred':pred[0]})
