@@ -28,7 +28,11 @@ def result(request):
 
         with open(os.path.join(settings.BASE_DIR, 'coders\\train_model.pkl'),'rb') as f:
             model = joblib.load(f)
-            pred = model.predict([[gender,age,openness,neuroticism,conscientiousness,agreeableness,extraversion]])
+
+            result = np.array([gender_no, age, openness,neuroticism, conscientiousness, agreeableness, extraversion], ndmin = 2)
+            final = scaler.fit_transform(result)
+            pred = str(model.predict(final)[0])
+
     if pred:
         db = personality(name=name,gender=gender,age=age,openness=openness,neuroticism=neuroticism,conscientiousness=conscientiousness,agreeableness=agreeableness,extraversion=extraversion,result=pred[0])
         db.save()
