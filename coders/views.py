@@ -10,6 +10,9 @@ def home(request):
 def test(request):
     return render(request, 'test.html')
 
+def aboutus(request):
+    return render(request, 'aboutus.html')
+
 def result(request):
     if request.method == "POST":
         name = request.POST['name']

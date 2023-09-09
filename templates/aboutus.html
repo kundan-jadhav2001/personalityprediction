@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  <title>Test</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+{% endblock %}
+{% block body %}
+<br>
+  <div class="about" style="margin-top: 40px; margin-left: 20px;">
+    <p>
+      Team Coders
+    </p>
+    <div class="row">
+      <div class="col-lg-4">
+        <img class="rounded-circle" src="{% static 'images/kundan.jpg' %}"
+          alt="img" width="140" height="140">
+        <h2>Kundan Jadhav</h2>
+        <p></p>
+        <!-- <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p> -->
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="rounded-circle" src="{% static 'images/mihika.jpg' %}"
+          alt="Generic placeholder image" width="140" height="140">
+        <h2>Mihika Rane</h2>
+        <p></p>
+        <!-- <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p> -->
+      </div><!-- /.col-lg-4 -->
+    </div>
+  </div>
+{% endblock %}
