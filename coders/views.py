@@ -2,6 +2,8 @@ from django.shortcuts import render
 import joblib ,os
 from django.conf import settings
 from coders.models import personality
+import numpy as np
+from sklearn.preprocessing import StandardScaler
 
 # Create your views here.
 def home(request):
@@ -31,8 +33,8 @@ def result(request):
 
         with open(os.path.join(settings.BASE_DIR, 'coders\\train_model.pkl'),'rb') as f:
             model = joblib.load(f)
-
-            result = np.array([gender_no, age, openness,neuroticism, conscientiousness, agreeableness, extraversion], ndmin = 2)
+            scaler = StandardScaler()
+            result = np.array([gender, age, openness,neuroticism, conscientiousness, agreeableness, extraversion], ndmin = 2)
             final = scaler.fit_transform(result)
             pred = str(model.predict(final)[0])
 
@@ -40,4 +42,4 @@ def result(request):
         db = personality(name=name,gender=gender,age=age,openness=openness,neuroticism=neuroticism,conscientiousness=conscientiousness,agreeableness=agreeableness,extraversion=extraversion,result=pred[0])
         db.save()
 
-    return render(request, 'result.html', {'name':name,'pred':pred[0]})
+    return render(request, 'result.html', {'name':name,'pred':pred})
